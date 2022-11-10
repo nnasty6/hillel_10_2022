@@ -9,8 +9,6 @@ FILTERED_DATA_FILE = LESSON_04_DIR / "filtered_data.txt"
 
 johns = []
 
-print(f'Size of file "rockyou" before filter - {asizeof.asizeof(ROCKYOU_FILENAME)}')
-
 
 def filter_lines(filename: Path, pattern: str) -> Generator:
     with open(filename, encoding="utf-8") as file:
@@ -37,7 +35,9 @@ line_count = sum(1 for line in open(FILTERED_DATA_FILE))
 line_count_rockyou = sum(1 for line1 in open(ROCKYOU_FILENAME))
 
 print(f'Total lines in file "rockyou" -  {line_count_rockyou}')
+
 print(f"Total lines in file with filtered names - {line_count}")
 
-print(f'Size of file "rockyou" - {asizeof.asizeof(ROCKYOU_FILENAME)}')
-print(f"Size of file with filtered names - {asizeof.asizeof(FILTERED_DATA_FILE)}")
+print(f'Size of "rockyou" - {asizeof.asizeof(ROCKYOU_FILENAME)}')
+
+print(f"Size of filtered file - {asizeof.asizeof(FILTERED_DATA_FILE)}")

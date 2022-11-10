@@ -15,8 +15,3 @@ def get_name():
 
 name = get_name()
 print(name)
-
-# gen = get_name_gen()
-#
-# for d in gen:
-#     print(d)

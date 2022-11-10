@@ -44,5 +44,4 @@ only_adults = (user for user in users if user.age > 18)
 # print(f'{data=}')
 # print(f'{filtered=}')
 
-
 print(list(only_adults))

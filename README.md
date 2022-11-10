@@ -33,6 +33,6 @@ We need rockyou file for creating filtering function. You can [download](https:/
 
 ### Install components for getting size of the files
 ```bash
-# install pympler
+# install pympler for using asizeof
 pip install pympler
 ```

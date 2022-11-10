@@ -35,6 +35,5 @@ class User:
 john = User(username="John")
 marry = User(username="Marry")
 
-
 print(john)
 print(marry)
