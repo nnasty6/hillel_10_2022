@@ -29,3 +29,28 @@ def get_university_founding_year() -> int:
 
 # TEST OUPUT
 print(get_university_name(), get_university_founding_year(), sep="\n")
+
+
+# Second part
+# MODIFY THIS DECORATOR
+def mask_data(target_key: str, replace_with: str = "*"):
+    """Replace the value of a dictionary with a 'masked' version."""
+
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            return func(target_key, replace_with * 5)
+
+        return wrapper
+
+    return decorator
+
+
+# TARGET FUNCTIONS
+@mask_data(target_key="name")
+def get_user(name: str, age: int):
+    return {"name": name, "age": age}
+
+
+# TEST OUPUT
+print(get_user(name="Alice", age=30), get_user(name="Bob", age=25), sep="\n")
